@@ -1,0 +1,3 @@
+[console_scripts]
+nginx_flaskapp_whitelister = nginx_flaskapp_whitelister:main
+

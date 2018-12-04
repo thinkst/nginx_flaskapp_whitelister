@@ -1,0 +1,9 @@
+README.md
+nginx_flaskapp_whitelister.py
+setup.py
+nginx_flaskapp_whitelister.egg-info/PKG-INFO
+nginx_flaskapp_whitelister.egg-info/SOURCES.txt
+nginx_flaskapp_whitelister.egg-info/dependency_links.txt
+nginx_flaskapp_whitelister.egg-info/entry_points.txt
+nginx_flaskapp_whitelister.egg-info/requires.txt
+nginx_flaskapp_whitelister.egg-info/top_level.txt

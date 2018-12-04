@@ -1,0 +1,4 @@
+*.pyc
+.DS_Store
+.arcconfig
+nginx-flaskapp-whitelister/build/
