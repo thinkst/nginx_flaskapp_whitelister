@@ -130,6 +130,7 @@ Flags:
         if len("|".join(dynamic_locations_write_variable)) < nginx_parameter_length_limit:
             dynamic_locations_write_variable.append(location)
         else:
+            dynamic_locations_write_variable.append(location)
             whitelist_location_conf.add(nginx.Location('~ (' + '|'.join(dynamic_locations_write_variable) + ')', nginx.Key('include', 'shared.conf')))
             dynamic_locations_write_variable = []
     if dynamic_locations_write_variable != []:
