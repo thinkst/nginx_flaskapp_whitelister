@@ -127,7 +127,7 @@ Flags:
     # the allowed location endpoints are chunked accordingly into as big as possible chunks within the limit
     dynamic_locations_write_variable = []
     for location in allowed_locations:
-        if len("|".join(dynamic_locations_write_variable)) < nginx_parameter_length_limit:
+        if len("|".join(dynamic_locations_write_variable + [location])) < nginx_parameter_length_limit:
             dynamic_locations_write_variable.append(location)
         else:
             dynamic_locations_write_variable.append(location)
