@@ -1,10 +1,8 @@
-Metadata-Version: 1.0
+Metadata-Version: 2.1
 Name: nginx-flaskapp-whitelister
 Version: 0.1
 Summary: A tool for whitelisting only endpoints explicitly allowed/defined in a Flask application, when being served by Nginx
-Home-page: UNKNOWN
 Author: Thinkst Applied Research
 Author-email: info@thinkst.com
 License: 3-Clause BSD
-Description: UNKNOWN
-Platform: UNKNOWN
+License-File: LICENSE
