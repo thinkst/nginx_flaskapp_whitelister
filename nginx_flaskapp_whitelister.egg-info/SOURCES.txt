@@ -1,3 +1,4 @@
+LICENSE
 README.md
 nginx_flaskapp_whitelister.py
 setup.py

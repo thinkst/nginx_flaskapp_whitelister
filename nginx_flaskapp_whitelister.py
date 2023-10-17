@@ -66,11 +66,11 @@ Flags:
 
     missing_arg = ""
     for argument in required_arguments:
-        if argument.values()[0] == "":
+        if list(argument.values())[0] == "":
             if missing_arg == "":
-                missing_arg = argument.keys()[0]
+                missing_arg = list(argument.keys())[0]
             else:
-                missing_arg = missing_arg + ", " + argument.keys()[0]
+                missing_arg = missing_arg + ", " + list(argument.keys())[0]
     if missing_arg != "":
         print('Required arguments (' + missing_arg + ') are missing. For more information run: nginx_flaskapp_whitelister -h')
         print(module_usage_string)
@@ -113,15 +113,15 @@ Flags:
 
     whitelist_location_conf = nginx.Conf()
     for location in current_locations:
-        if location.keys()[0] == 'location /':
+        if list(location.keys())[0] == 'location /':
             for key in location['location /']:
                 nested_key = []
-                if "if (" in key.keys()[0]:
-                    for x in key[key.keys()[0]]:
-                        nested_key.append(nginx.Key(x.keys()[0], x[x.keys()[0]]).as_strings)
-                    allowed_location_keys.append(nginx.Key(key.keys()[0], '{ ' + "".join(nested_key) + ' }'))
+                if "if (" in list(key.keys())[0]:
+                    for x in key[list(key.keys())[0]]:
+                        nested_key.append(nginx.Key(list(x.keys())[0], x[list(x.keys())[0]]).as_strings)
+                    allowed_location_keys.append(nginx.Key(list(key.keys())[0], '{ ' + "".join(nested_key) + ' }'))
                 else:
-                    allowed_location_keys.append(nginx.Key(key.keys()[0], key[key.keys()[0]]))
+                    allowed_location_keys.append(nginx.Key(list(key.keys())[0], key[list(key.keys())[0]]))
 
     # As Nginx has a parameter limit that caps the amount of characters allowed in a directive parameter,
     # the allowed location endpoints are chunked accordingly into as big as possible chunks within the limit
