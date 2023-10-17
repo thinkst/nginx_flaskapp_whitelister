@@ -6,3 +6,4 @@ Author: Thinkst Applied Research
 Author-email: info@thinkst.com
 License: 3-Clause BSD
 License-File: LICENSE
+Requires-Dist: python-nginx>=1.5.1
